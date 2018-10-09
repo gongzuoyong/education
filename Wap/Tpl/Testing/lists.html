@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="mdd-index" style="font-size: 40px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="charset" content="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="application-name" content="">
+<title>家庭教育</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="version" content="ddtouch">
+<meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+<link rel="stylesheet" href="/Public/xinlin/css/common.css">
+<link rel="stylesheet" href="/Public/xinlin/css/app.css?v=201506d05">
+<link rel="stylesheet" href="/Public/xinlin/css/texting.css?v=20150605">
+<script src="/Public/js/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+<ul class="lists_ul">
+	<li><span class="lists_on" data = "mf">免费课程</span></li>
+	<li><span data = "ff">付费课程</span></li>
+</ul>
+	<section class="seckilling familyS" dd_name="课程推荐" style="margin-top:90px;">
+		<div class="seckilling-box" style="margin:10px 0px">
+			<div class="seckilling-con" id="seckill_index"> 
+				
+			</div>
+		</div>
+	</section>
+<script>
+ var ajaxfunction = function(curPage,ccdata){
+	    $.ajax({
+		    type:"GET",
+		    url:"/index.php/Testing/listsAjax",
+		    data:{p:curPage,data:ccdata},
+		    dataType:"json",
+		    success:function(data){
+				if(data.length<=0){
+					alert("没有试题了");
+					return;
+				}
+		        var str = "";
+		        $.each(data,function(index,row){
+		           str += '<dl>';
+				   str += '<a href="/index.php/Testing/detail/id/'+row.id+'">';
+				   str += '<dt><img src="/Public/Uploads/kspic/'+row.picname+'"/></dt>';
+				   str += '<dd class="title"><span class="title">'+row.title+'</span></dd>';
+				   if(ccdata == "mf"){
+					   str += '<dd><span class="money" style="text-decoration:none;">'+row.view+'人测试过</span></dd>';
+					   str += '<dd><span class="dzmoney">免费</span></dd>';
+				   }else if(ccdata == "ff"){
+					   	str += '<dd>'+row.view+'人测试过</dd>';
+						str += '<dd><span class="dzmoney">'+row.money+'</span><span class="money" style="margin-left:20px;">'+row.ymoney+'</span></dd>';
+				   }
+				   
+				   str += '</a>';
+				   str += '</dl>';
+		        })
+		        $("#seckill_index").append(str);
+		    }
+		});
+ }
+$(function(){
+	var ccdata='mf';
+	$("ul li span").click(function(){
+		var curPage = "1";
+		$(this).addClass("lists_on").parent("li").siblings("li").children("span").removeClass("lists_on");
+		$("#seckill_index").html("");
+		ccdata=$(this).attr("data");
+		ajaxfunction(curPage,ccdata);
+		$(window).scroll(function() {
+		    //$(document).scrollTop() 获取垂直滚动的距离
+		    //$(document).scrollLeft() 这是获取水平滚动条的距离
+
+		    if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+
+ 				curPage++;
+		    	console.log(curPage)
+		    	ajaxfunction(curPage,ccdata);
+		    }
+		});
+	});
+$("ul li span").eq("0").click();
+
+}); 
+</script>
+</body>
+<style type="text/css" id="17050682000">
+
+</style>
+</html><!--LHC-2015-10-09-->

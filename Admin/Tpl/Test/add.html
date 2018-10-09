@@ -1,0 +1,54 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/listtest/callbackType/closeCurrent"  enctype="multipart/form-data" class="pageForm required-validate" 
+		onsubmit="return iframeCallback(this);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+        <div class="pageFormContent" layoutH="60">
+            <!-- <dl>
+                <dt>试卷类型:</dt>
+                <dd><{html_options name='tid' options=$myOptions selected=$mySelect}></dd>
+            </dl> -->
+			<dl>
+				<dt>试卷名:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="title"/></dd>
+			</dl>
+			<dl>
+				<dt>视频图片：</dt>
+				<dd><input type="file" style="width:100%" name="picname"/></dd>
+            </dl>
+            <dl>
+				<dt>需不需要付费：</dt>
+				<dd>
+					<input name="status" type="radio" value="mf" />免费 
+					<input name="status" type="radio" value="ff" />付费 
+				</dd>
+            </dl>
+            <dl style=" height:50px; display:block; clear:both; overflow:hidden;">
+				<dt>付费：</dt>
+				<dd style="height:70px; display:block;">
+					<span style="float:left">
+						<i style="float:left">原价:</i>
+						<input name="ymoney" type="text" value="原价"  style="float:left" />
+					</span>
+					<span style="float:left">
+						<i style="float:left">打折:</i>
+						<input name="money" type="text" value="打折"  style="float:left" />
+					</span>
+					<div style="clear:both;"/>
+				</dd>
+            </dl>
+            <dl>
+				<dt>介绍：</dt>
+				<dd>
+					<textarea name="dec"></textarea>
+				</dd>
+            </dl>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

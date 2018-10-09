@@ -1,0 +1,51 @@
+[ 2017-11-12T22:42:43+08:00 ] 127.0.0.1 /home.php/Test/index/p/11.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.092006s ]
+INFO: [ route_check ] --END-- [ RunTime:0.092006s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\ThinkPHP\Lib\Core\Dispatcher.class.php ç¬¬ 132 è¡Œ.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.051003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.051003s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\wamp\www\ThinkPHP\Lib\Driver\Db\DbMysql.class.php ç¬¬ 55 è¡Œ.
+NOTIC: [2] mysql_connect():  E:\wamp\www\ThinkPHP\Lib\Driver\Db\DbMysql.class.php ç¬¬ 55 è¡Œ.
+ERR: ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+
+[ 2017-11-12T22:43:13+08:00 ] 127.0.0.1 /home.php/Test/index/p/11.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\ThinkPHP\Lib\Core\Dispatcher.class.php ç¬¬ 132 è¡Œ.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\wamp\www\ThinkPHP\Lib\Driver\Db\DbMysql.class.php ç¬¬ 55 è¡Œ.
+SQL: SHOW COLUMNS FROM `edu_test` [ RunTime:0.092005s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\ThinkPHP\Lib\Core\Db.class.php ç¬¬ 604 è¡Œ.
+SQL: SELECT * FROM `edu_test`  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: where E:\wamp\www\Home\Lib\Action\TestAction.class.php ç¬¬ 31 è¡Œ.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\ThinkPHP\Lib\Core\Db.class.php ç¬¬ 604 è¡Œ.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_test` LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: where E:\wamp\www\Home\Lib\Action\TestAction.class.php ç¬¬ 33 è¡Œ.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\ThinkPHP\Lib\Core\Db.class.php ç¬¬ 604 è¡Œ.
+SQL: SELECT * FROM `edu_test` LIMIT 10,10   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.346020s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\ThinkPHP\Lib\Core\Db.class.php ç¬¬ 604 è¡Œ.
+SQL: SELECT * FROM `edu_cat` WHERE ( pid=0 ) LIMIT 6   [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\ThinkPHP\Lib\Core\Db.class.php ç¬¬ 604 è¡Œ.
+SQL: SELECT * FROM `edu_test` ORDER BY addtime desc LIMIT 10   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: title E:\wamp\www\Home\Runtime\Cache\f51c3a5dedc79fab6fd9e998b23775fa1696a356.file.index.html.php ç¬¬ 93 è¡Œ.
+NOTIC: [8] Trying to get property of non-object E:\wamp\www\Home\Runtime\Cache\f51c3a5dedc79fab6fd9e998b23775fa1696a356.file.index.html.php ç¬¬ 93 è¡Œ.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.449026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.450026s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.033002s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.023001s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.011001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.071004s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.007000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.008000s ]
+

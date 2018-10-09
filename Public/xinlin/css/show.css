@@ -1,0 +1,27 @@
+header{background:#fff; font-size: 14px;}
+header .title{ line-height: 25px; margin: 10px; overflow: hidden;}
+header .title p{margin:10px 0; overflow: hidden; display:block; line-height: 25px;}
+header .phone{padding-left: 25px; color:#fe4c6c; background:url("/Public/xinlin/images/01_4_07.png"); background-repeat: no-repeat; background-size: 20px;}
+header .weixin{margin-left:20px; color:#fe4c6c;}
+header .fonts{float: right; color:#999;}
+
+.content{background: #fff; margin-top: 10px;}
+.content .title{border-bottom: 1px solid #eee; padding-left: 35px; background: url("/public/xinlin/images/01_4_10.png"); background-size: 16px; background-repeat: no-repeat;background-position: 10px 20px;} 
+
+.content .js{border-bottom: 1px solid #eee; padding-left: 35px; background: url("/public/xinlin/images/01_6_03.png"); background-size: 16px; background-repeat: no-repeat;background-position: 10px 20px;} 
+.content .yy{border-bottom: 1px solid #eee; padding-left: 35px; background: url("/public/xinlin/images/01_6_06.png"); background-size: 16px; background-repeat: no-repeat;background-position: 10px 20px;} 
+.content .xs{border-bottom: 1px solid #eee; padding-left: 35px; background: url("/public/xinlin/images/01_7_03.png"); background-size: 16px; background-repeat: no-repeat;background-position: 10px 20px;} 
+
+.content .title span{line-height: 55px; font-size: 16px;}
+.content .cc{font-size: 12px; line-height: 25px; padding: 20px 10px; overflow: hidden;}
+.content .cc dl{display: inline-block; width: 39%; float: left; margin:0 5%;}
+.content .cc dl dt{width: 100%; height: 120px; background: #ccc;}
+.content .cc dl dd.xstitle{font-size: 14px;}
+.content .cc dl dd.xsmoney{font-size: 14px; text-decoration:line-through; color: #999}
+.content .cc dl dd.xsmoneydz{font-size: 14px; color:#fe4c6c;}
+.content .cc dl dd.xsmoneydz span{float:right; color:#000;}
+
+footer{background: #fff; overflow: hidden; line-height: 80px; padding:0px 10px 0px 10px; position: fixed; bottom: 0px; border-top: 1px solid #eee; width: 100%;}
+footer span.money{color:#fe4c6c;}
+footer span{color:#999;}
+footer a.buttonRed{display: block; float: right; font-size: 16px; padding:10px 20px; border-radius: 5px; background: #fe4c6c; color: #fff; height: 30px; line-height: 30px; margin: 20px 10px;}

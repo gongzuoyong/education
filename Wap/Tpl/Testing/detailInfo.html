@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="mdd-index" style="font-size: 40px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="charset" content="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="application-name" content="">
+<title><{$data.title}></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="version" content="ddtouch">
+<meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+<link rel="stylesheet" href="/Public/xinlin/css/common.css">
+<link rel="stylesheet" href="/Public/xinlin/css/texting.css?v=20150605">
+<script src="/Public/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".quest .questp span").click(function(){
+		$(this).addClass("questOn").siblings("span").removeClass("questOn");
+	})
+})
+</script>
+</head>
+<body style="padding:10px;">
+    <div class="info_title"><{$data.title}></div>
+    <form id="form" method="post" action="__APP__/Testing/score">
+        <input type="hidden" name="tid" value="<{$tid}>">
+        <input type="hidden" name="uid" value="<{$smarty.session.user.id}>">
+        <ul class="quest">
+        <{foreach $list as $vo}>
+            <li id="cont">题目：<{$vo@iteration}>.<{$vo.content}></br></br>
+            <p id="radio" class="questp">
+                <span>
+                	<input type="radio" name="test[<{$vo.id}>]" value="A" id="<{$vo.id}>A"> 
+                	<label for="<{$vo.id}>A"><img src="/Public/xinlin/images/03_a_03.png"/>
+                		<{$vo.aA}>
+                	</label>
+                </span>
+                <span>
+                	<input type="radio" name="test[<{$vo.id}>]" value="B" id="<{$vo.id}>B"> 
+                	<label for="<{$vo.id}>B"><img src="/Public/xinlin/images/03_a_06.png"/>
+                		<{$vo.aB}>
+                	</label>
+                </span>
+                <span>
+                	<input type="radio" name="test[<{$vo.id}>]" value="C" id="<{$vo.id}>C"> 
+                	<label for="<{$vo.id}>C"><img src="/Public/xinlin/images/03_a_08.png"/>
+                		<{$vo.aC}>
+                	</label>
+                </span>
+                <span>
+                	<input type="radio" name="test[<{$vo.id}>]" value="D" id="<{$vo.id}>D"> 
+                	<label for="<{$vo.id}>D"><img src="/Public/xinlin/images/03_a_10.png"/>
+                		<{$vo.aD}>
+                	</label>
+                </span>
+            </p>
+            </li>
+        <{/foreach}>
+    	</ul>
+    	<div class="mb30 m_cats">
+            <ul class="quest">  
+                <li><button type="submit" class="btn btn-primary btn-lg btn-block">提交</button></li>
+            </ul>
+        </div>
+    </form>
+</body>
+
+</style>
+</html>

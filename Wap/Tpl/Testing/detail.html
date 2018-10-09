@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="mdd-index" style="font-size: 40px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="charset" content="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="application-name" content="">
+<title><{$data.title}></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="version" content="ddtouch">
+<meta http-equiv="Cache-Control" content="must-revalidate,no-cache">
+<link rel="stylesheet" href="/Public/xinlin/css/common.css">
+<link rel="stylesheet" href="/Public/xinlin/css/texting.css?v=20150605">
+</head>
+<body>
+    <div class="det_content">
+        <p class="det_title"><{$data.title}></p>
+        <p class="det_mintitle"><{$data.view}>人测试过</p>
+        <img src="/Public/Uploads/kspic/<{$data.picname}>"/>
+        <div class="cc">
+            <{$data.dec}>
+        </div>
+    </div>
+
+<div class="det_button">
+    <a href="/index.php/Testing/detailInfo/id/<{$data.id}>">开始测试</a>
+</div>
+</body>
+
+</style>
+</html>

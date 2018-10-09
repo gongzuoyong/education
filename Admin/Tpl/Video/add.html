@@ -1,0 +1,68 @@
+<style>
+	.pageFormContent dl{width:100%;}
+</style>
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/listvideo/callbackType/closeCurrent" enctype="multipart/form-data" class="pageForm required-validate" 
+		onsubmit="return iframeCallback(this);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>视频名：</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="videoname"/></dd>
+            </dl>
+            <dl>
+				<dt>文档类别：</dt>
+				<dd>
+					<select  name="tid">
+						<{foreach $cat as $vo}>
+						<option value ="<{$vo.id}>"><{$vo.name}></option>
+						<{/foreach}>
+					</select>
+				</dd>
+            </dl>
+            <dl>
+				<dt>视频图片：</dt>
+				<dd><input type="file" style="width:100%" name="picname"/></dd>
+            </dl>
+            <dl>
+				<dt>选择视频：</dt>
+				<dd><input type="file" style="width:100%" name="video"/></dd>
+            </dl>
+			<dl style="height:165px;  display: block; overflow: hidden;">
+				<dt>课程简介：</dt>
+				<dd><textarea class='editor' class="required" cols="50" rows="10" name="courses_dec" tools='simple' upImgUrl='__URL__/doupload' upImgExt='jpg,jpeg,gif,png'></textarea></dd>
+			</dl>
+			<dl style="height:165px; display: block; overflow: hidden;">
+				<dt>讲师介绍：</dt>
+				<dd><textarea class='editor' class="required" cols="50" rows="10" name="introduction" tools='simple' upImgUrl='__URL__/doupload' upImgExt='jpg,jpeg,gif,png'></textarea></dd>
+			</dl>
+			<dl style="height:165px; display: block; overflow: hidden;">
+				<dt>预约咨询：</dt>
+				<dd><textarea class='editor' class="required" cols="50" rows="10" name="consulting" tools='simple' upImgUrl='__URL__/doupload' upImgExt='jpg,jpeg,gif,png'></textarea></dd>
+			</dl>
+			<dl>
+				<dt>是否付费：</dt>
+				<dd><input type="radio" name="is_pay" value="1"/>  付费    <input type="radio" name="is_pay" value="0"/>  免费</dd>
+			</dl>
+			<dl>
+				<dt>是放在首页幻灯片：</dt>
+				<dd><input type="radio" name="is_top" value="1"/>  是    <input type="radio" name="is_top" value="0"/>  否</dd>
+			</dl>
+			<dl>
+				<dt>原价：</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="price"/></dd>
+			</dl>
+			<dl>
+				<dt>现价：</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="price_now"/></dd>
+			</dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+
